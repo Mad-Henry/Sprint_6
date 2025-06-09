@@ -10,7 +10,7 @@ from locators.order_page_locators import OrderPageLocators as OPL
 class TestOrderPage:
 
     @allure.title("Проверка верхней кнопки Заказать")
-    def test_upper_order_button(self, driver):
+    def test_upper_tst_order_button(self, driver):
         order_page = MainPage(driver)
         order_page.open_main_page_url()
         order_page.click_upper_order_button()
