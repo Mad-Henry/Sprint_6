@@ -1,5 +1,4 @@
 import allure
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pages.base_page import BasePage
 from locators.redirects_page_locators import RedirectsPageLocators
@@ -51,10 +50,10 @@ class RedirectPage(BasePage):
         return self.driver.current_url
 
     def wait_for_about_blank(self, driver):
-        WebDriverWait(driver, 10).until( lambda d: d.current_url != "about:blank")
+        self.wdwait.until( lambda d: d.current_url != "about:blank")
 
     def wait_for_presence(self, driver, locator):
-        return WebDriverWait(driver, 10).until(EC.presence_of_element_located(locator))
+        return self.wdwait.until(EC.presence_of_element_located(locator))
 
     @allure.step("Ожидаем загрузку страницы Яндекса и появление попапа")
     def wait_for_ya_page_download(self, driver):
