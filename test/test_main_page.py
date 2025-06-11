@@ -4,9 +4,9 @@ from pages.main_page import MainPage
 from data import answers_data
 
 
-@allure.title("Тесты на проверку вопрсоов")
 class TestMainPage:
 
+    @allure.title("Проверка вопросов и ответов на главной странице")
     @pytest.mark.parametrize('num', list(range(8))) 
     def test_questions_and_answers_section_on_main_page(self, num, driver):
         page = MainPage(driver)

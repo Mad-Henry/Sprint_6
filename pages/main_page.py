@@ -11,6 +11,7 @@ class MainPage(BasePage):
     def open_main_page_url(self):
         self.go_to_url(MAIN_PAGE_URL)
 
+
 # Набор кликов (кнопки, чекбоксы, дропдауны)
 
     @allure.step("Клик по верхней нопке Заказать")

@@ -46,15 +46,6 @@ class RedirectPage(BasePage):
     def switch_to_tab(self, tab):
         self.driver.switch_to.window(tab)
 
-    def current_url(self):
-        return self.driver.current_url
-
-    def wait_for_about_blank(self, driver):
-        self.wdwait.until( lambda d: d.current_url != "about:blank")
-
-    def wait_for_presence(self, driver, locator):
-        return self.wdwait.until(EC.presence_of_element_located(locator))
-
     @allure.step("Ожидаем загрузку страницы Яндекса и появление попапа")
     def wait_for_ya_page_download(self, driver):
         self.wait_for_about_blank(driver)

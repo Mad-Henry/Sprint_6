@@ -38,4 +38,12 @@ class BasePage:
     
     def get_url(self):
         return self.driver.current_url    
-    
+
+    def current_url(self):
+        return self.driver.current_url
+
+    def wait_for_about_blank(self, driver):
+        self.wdwait.until( lambda d: d.current_url != "about:blank")
+
+    def wait_for_presence(self, driver, locator):
+        return self.wdwait.until(EC.presence_of_element_located(locator))

@@ -6,7 +6,6 @@ from data import ORDER_1_DATA, ORDER_2_DATA, ORDER_PAGE_URL
 from locators.order_page_locators import OrderPageLocators as OPL
 
 
-@allure.title("Тесты на проверку кнопок заказа и оформления заказа")
 class TestOrderPage:
 
     @allure.title("Проверка верхней кнопки Заказать")

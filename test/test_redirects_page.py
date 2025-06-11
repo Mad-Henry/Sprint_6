@@ -3,7 +3,6 @@ from pages.redirects_page import RedirectPage
 from data import MAIN_PAGE_URL, DZEN_URL
 
 
-@allure.title("Тесты на проверку переходов по ссылкам из лого")
 class TestRedirectsPage:
 
     @allure.title("Тест на проверку перехода по ссылкам из лого Самоката")
